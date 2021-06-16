@@ -1,0 +1,11 @@
+html    
+    head
+        title="Productos"
+    body
+        if cantidad == undefined
+            h1= mensaje
+        else 
+            each prod in prods
+                li= prod.title
+                li= prod.price 
+                img(src=prod.thumbnail)

@@ -9,8 +9,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/api/', routes());
 
+app.use(express.static('public'));
 app.set('view engine', 'pug');
 app.set('views', './views');
+
 
 // pongo a escuchar el servidor en el puerto indicado
 const puerto = 8080;
